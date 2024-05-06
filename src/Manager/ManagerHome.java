@@ -54,11 +54,13 @@ public class ManagerHome extends JFrame{
     
     public ManagerHome(String namaAuth){
         this.namaAuth = namaAuth;
+        ImageIcon ikon = new ImageIcon(getClass().getResource("/Manager/GambarM.img/manager.png"));
         setTitle("Manager Home");
         setLayout(null);
         setSize(1000, 550);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        this.setIconImage(ikon.getImage());
         
         // Deklarasi JLabel
         label = new JLabel[6];
@@ -72,14 +74,22 @@ public class ManagerHome extends JFrame{
          // Membuat menu bar
         JMenuBar menuBar = new JMenuBar();
 
+        // Membuat Manage Barang
+        ImageIcon icon_Manager= new ImageIcon(getClass().getResource("/Manager/GambarM.img/inventory.png"));
         // Menu "Manage Barang"
-        JMenu manageMenu = new JMenu("Manage");
+        JMenu manageMenu = new JMenu("");
+        manageMenu.setIcon(icon_Manager); // Menetapkan ikon pada JMenu
+
         JMenuItem managebarangItem = new JMenuItem("Manage Barang");
         manageMenu.add(managebarangItem);
         menuBar.add(manageMenu);
         
+        // Membuat Laporan
+        ImageIcon icon_Laporan= new ImageIcon(getClass().getResource("/Manager/GambarM.img/Laporan.png"));
         // Menu "Laporan"
-        JMenu laporanMenu = new JMenu("Laporan");
+        JMenu laporanMenu = new JMenu("");
+        laporanMenu.setIcon(icon_Laporan); // Menetapkan ikon pada JMenu
+
         JMenuItem laporanItem = new JMenuItem("Laporan Penjualan");
         laporanMenu.add(laporanItem);
         menuBar.add(laporanMenu);
@@ -207,6 +217,8 @@ public class ManagerHome extends JFrame{
                 
         // Button Tambah Barang
         button[0] = new btn("Tambah Barang", 500, 162, 230, 40);
+        ImageIcon icon1 = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/plus.png")); // Mendapatkan ikon dari path yang tepat
+        button[0].setIcon(icon1); // Menambahkan ikon ke JButton
         add(button[0]);
         
         button[0].addActionListener(e -> {
@@ -241,6 +253,8 @@ public class ManagerHome extends JFrame{
 
         // Button Hapus Barang
         button[1] = new btn("Hapus Barang", 740, 162, 230, 40);
+        ImageIcon icon2 = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/remove.png")); // Mendapatkan ikon dari path yang tepat
+        button[1].setIcon(icon2); // Menambahkan ikon ke JButton
         add(button[1]);
 
         button[1].addActionListener(e -> {
@@ -272,6 +286,8 @@ public class ManagerHome extends JFrame{
         
         // Button Ubah Data Barang
         button[2] = new btn("Ubah Data Barang", 570, 222, 330, 40);
+        ImageIcon icon3 = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/change.png")); // Mendapatkan ikon dari path yang tepat
+        button[2].setIcon(icon3); // Menambahkan ikon ke JButton
         add(button[2]);
 
         button[2].addActionListener(e -> {
@@ -297,6 +313,8 @@ public class ManagerHome extends JFrame{
         
         // Button Konfirmasi Ubah Data Barang
         button[3] = new btn("Konfirmasi Ubah Data Barang", 570, 272, 330, 40);
+        ImageIcon icon4 = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/refresh.png")); // Mendapatkan ikon dari path yang tepat
+        button[3].setIcon(icon4); // Menambahkan ikon ke JButton
         add(button[3]);
 
         button[3].addActionListener(e -> {

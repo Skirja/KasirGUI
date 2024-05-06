@@ -25,6 +25,8 @@ public class Login extends JFrame{
     private JButton loginButton;
     private Connection connection;
     private String namaAuth;
+    ImageIcon ikon = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/smartphone.png"));
+    
     
     // Super class JLabel
     class lbl extends JLabel{
@@ -95,10 +97,15 @@ public class Login extends JFrame{
         PromptSupport.setPrompt("Masukkan Password", passwordField);
         
         // Button Login
-        loginButton = new JButton();
-        loginButton.setFont(new Font("Arial", Font.BOLD, 12));
+        loginButton = new JButton("Login"); // Inisialisasi JButton dengan teks "Login"
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Auth/Gambar.img/ikey.png")); // Mendapatkan ikon dari path yang tepat
+        loginButton.setIcon(icon); // Menambahkan ikon ke JButton
+        this.getContentPane().add(loginButton); // Menambahkan JButton ke dalam konten utama frame        
+
+        //loginButton.setIcon(new ImageIcon(this.getClass().getResource("src/Auth/Gambar/ikey.png")));
+        loginButton.setFont(new Font("Arial", Font.BOLD, 8));
         loginButton.setText("Login");
-        loginButton.setBounds(10, 148, 80, 22);
+        loginButton.setBounds(10, 148, 80, 25);
         add(loginButton);
         
         loginButton.addActionListener(e -> {

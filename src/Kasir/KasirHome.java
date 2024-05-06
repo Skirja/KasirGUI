@@ -75,19 +75,32 @@ public class KasirHome extends JFrame {
         // Deklarasi JButton
         button = new JButton[5];
         
+        
         // Deklarasi JComboBox
         boxPembayaran = new JComboBox();
         
         // Membuat menu bar
         JMenuBar menuBar = new JMenuBar();
 
+        // Membuat ikon dari gambar yang disimpan
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/shopping-bag.png"));
         // Menu "Keranjang"
-        JMenu keranjangMenu = new JMenu("Keranjang");
+        JMenu keranjangMenu = new JMenu("Payment");
+        keranjangMenu.setIcon(icon); // Menetapkan ikon pada JMenu
         menuBar.add(keranjangMenu);
 
+        // Membuat ikon Keluar
+        ImageIcon icon1 = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/keluar.png"));
         // Menu "Keluar"
         JMenu keluarMenu = new JMenu("Keluar");
+        keluarMenu.setIcon(icon1); // Menetapkan ikon pada JMenu
         JMenuItem logoutItem = new JMenuItem("Logout");
+        
+        
+        // Membuat ikon Logout
+        ImageIcon icon2 = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/switch.png"));
+        logoutItem.setIcon(icon2); // Menetapkan ikon pada JMenuItem
+        // Membuat ikon Logout
         keluarMenu.add(logoutItem);
         menuBar.add(keluarMenu);
         
@@ -198,6 +211,8 @@ public class KasirHome extends JFrame {
         add(txtField[6]);
         
         button[4] = new btn("Hitung", 680, 240, 290, 50);
+        ImageIcon icon5 = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/payment.png")); // Mendapatkan ikon dari path yang tepat
+        button[4].setIcon(icon5); // Menambahkan ikon ke JButton
         button[4].addActionListener(e -> {
             try {
                 // Mendapatkan nilai dari txtField[5] (total harga) dan txtField[6] (jumlah bayar)
@@ -218,6 +233,8 @@ public class KasirHome extends JFrame {
   
         // Button Cek Barang
         button[0] = new btn("Cek Barang", 570, 112, 330, 40);
+        ImageIcon icon6 = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/searching.png")); // Mendapatkan ikon dari path yang tepat
+        button[0].setIcon(icon6); // Menambahkan ikon ke JButton
         add(button[0]);
         
         button[0].addActionListener(e -> {
@@ -242,6 +259,8 @@ public class KasirHome extends JFrame {
         
         // Button Tambah Barang
         button[1] = new btn("Tambah Barang", 500, 162, 230, 40);
+        ImageIcon icon3 = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/plus.png")); // Mendapatkan ikon dari path yang tepat
+        button[1].setIcon(icon3); // Menambahkan ikon ke JButton
         add(button[1]);
         
         button[1].addActionListener(e -> {
@@ -291,6 +310,8 @@ public class KasirHome extends JFrame {
 
         // Button Hapus Barang
         button[2] = new btn("Hapus Barang", 740, 162, 230, 40);
+        ImageIcon icon4 = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/remove.png")); // Mendapatkan ikon dari path yang tepat
+        button[2].setIcon(icon4); // Menambahkan ikon ke JButton
         
         button[2].addActionListener(e -> {
             int selectedRow = barangTabel.getSelectedRow();
@@ -324,6 +345,8 @@ public class KasirHome extends JFrame {
         
         // Button Print Resi
         button[3] = new btn("Print Resi", 570, 310, 330, 40);
+        ImageIcon icon7 = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/print.png")); // Mendapatkan ikon dari path yang tepat
+        button[3].setIcon(icon7); // Menambahkan ikon ke JButton
         add(button[3]);
         
         setVisible(true);
