@@ -100,9 +100,18 @@ public class ManagerHome extends JFrame{
             dispose();
         });
         
+        // Membuat ikon Keluar
+        ImageIcon icon_keluar = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/keluar.png"));
         // Menu "Keluar"
-        JMenu keluarMenu = new JMenu("Keluar");
+        JMenu keluarMenu = new JMenu("");
+        keluarMenu.setIcon(icon_keluar); // Menetapkan ikon pada JMenu
         JMenuItem logoutItem = new JMenuItem("Logout");
+        
+        
+        // Membuat ikon Logout
+        ImageIcon icon_logout = new ImageIcon(getClass().getResource("/Kasir/GambarK.img/switch.png"));
+        logoutItem.setIcon(icon_logout); // Menetapkan ikon pada JMenuItem
+        // Membuat ikon Logout
         keluarMenu.add(logoutItem);
         menuBar.add(keluarMenu);
         
