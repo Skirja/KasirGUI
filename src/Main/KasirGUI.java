@@ -15,9 +15,9 @@ import Auth.Login;
  */
 public class KasirGUI {
     // Informasi koneksi ke database SQL Server
-    private static final String URL = "jdbc:sqlserver://localhost\\LAPTOP-KK8IE6CU:1433;databaseName=db_programKasir;encrypt=true;trustServerCertificate=true";
+    private static final String URL = "jdbc:sqlserver://localhost\\GHAZY:1433;databaseName=db_programKasir;encrypt=true;trustServerCertificate=true";
     private static final String USERNAME = "sa";
-    private static final String PASSWORD = "irza1103";
+    private static final String PASSWORD = "123";
 
     // Metode untuk mendapatkan koneksi ke SQL Server
     public static Connection getConnection() throws SQLException {

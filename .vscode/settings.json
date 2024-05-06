@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\ahmad\\Downloads\\mssql-jdbc-12.6.1.jre11.jar",
+        "c:\\Users\\ahmad\\Downloads\\swingx-all-1.6.4.jar"
+    ]
+}
